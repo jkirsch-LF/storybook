@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 
 // Load User Model
+console.log("path",__dirname);
 require('./models/User');
 
 // Passport Config
