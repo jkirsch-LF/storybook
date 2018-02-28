@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 const passport = require('passport');
 const exphps = require('express-handlebars');
+const methodOverride = require('method-override');
 
 // Load Models
 require('./models/User');
@@ -39,8 +40,12 @@ mongoose.connect(keys.mongoURI)
 
 const app = express();
 
+// Body Parser Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+// Method Override Middleware
+app.use(methodOverride('_method'));
 
 // Handlebars Middleware
 app.engine('handlebars', exphps({
