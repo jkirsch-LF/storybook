@@ -3,11 +3,11 @@
     {{#each stories}}
     <div class="col s12 m4">
         <div class="card">
+
             <div class="card-image">
-                <a href="/stories/edit/{{id}}" class="btn-floating halfway-fab red">
-                    <i class="fa fa-pencil"></i>
-                </a>
+                {{#if user}} {{{editIcon user.id ../user.id id}}} {{/if}}
             </div>
+
             <div class="card-content center-align">
                 <h5>{{title}}</h5>
                 <p class="story-text">{{stripTags (truncate body 150)}}</p>
@@ -16,9 +16,11 @@
                     <img src="{{user.image}}"> {{user.firstName}}
                 </div>
             </div>
+
             <div class="card-action center-align">
                 <a href="/stories/show/{{id}}">Read More</a>
             </div>
+
         </div>
     </div>
     {{else}}
