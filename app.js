@@ -7,7 +7,6 @@ const session = require('express-session');
 const passport = require('passport');
 const exphps = require('express-handlebars');
 
-
 // Load Models
 require('./models/User');
 require('./models/Story');
