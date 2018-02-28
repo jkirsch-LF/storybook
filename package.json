@@ -9,6 +9,7 @@
   "author": "James Kirsch",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "cookie-parser": "^1.4.3",
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
@@ -19,7 +20,7 @@
     "passport": "^0.4.0",
     "passport-google-oauth20": "^1.0.0"
   },
-  "engine":{
-      "node": "8.9.4"
+  "engine": {
+    "node": "8.9.4"
   }
 }
