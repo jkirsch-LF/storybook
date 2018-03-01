@@ -13,7 +13,8 @@
                 <p class="story-text">{{stripTags (truncate body 150)}}</p>
                 <br>
                 <div class="chip">
-                    <img src="{{user.image}}"> {{user.firstName}}
+                    <img src="{{user.image}}"> 
+                    <a href="/stories/user/{{user.id}}">{{user.firstName}}</a> 
                 </div>
             </div>
 
